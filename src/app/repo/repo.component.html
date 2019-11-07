@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <app-form (emitSearch)="searchUser4 ($event)" (emitRepo)="getRepos($event)"></app-form>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <!-- <h5 class="card-title"> User: {{users.login}}</h5> -->
+          <img class="card-img-top product-image" src = '{{users.avatar_url}}' alt="User's avatar">
+          <p class="card-text">User ID: {{users.id}}</p>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-8">
+        <p class= text-black style="background-color:cyan">User Name: {{users.login}}</p>
+        <p class=text-black style="background-color:cyan">User ID: {{users.id}}</p>
+        <p class=text-black style="background-color:cyan">Followers: {{users.id}}</p>
+        <p class=text-black  style="background-color:cyan">Following: {{users.id}}</p>
+        
+
+      </div>
+    
+
+  </div><br>
+
+ 
+  <h2 class="text-white">Repositories</h2><br>
+  <div class="row">
+  <div class="card-columns ">
+    <div *ngFor="let repo of repos">
+      <div appRepoHover class="card">
+        <h4 class="card-header-title"> {{repo.name  | uppercase  }}</h4>
+
+        <h5 class="mb-0 pb-3 pt-2"> {{repo.description}} </h5>
+
+        <h6 class="mb-0 pb-3 pt-2"><a href="{{repo.html_url}}">View  on Github</a></h6>
+                <button class="btn btn-info">View Details</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>

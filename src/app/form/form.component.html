@@ -1,0 +1,12 @@
+<div style="margin:30px">
+  
+  <form class="form-inline">
+      <div class="form-group">
+          <input type="text" class="form-control mr-10" id="searchbar" placeholder="user-name" name="searchUser"
+              [(ngModel)]="searchUser">
+      </div>
+      <button type="submit" class="btn btn-info" (click)="search()" (click)="getRepos()">Search</button>
+  </form>
+
+
+</div>
