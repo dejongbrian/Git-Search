@@ -18,9 +18,9 @@ export class RepoComponent implements OnInit {
   constructor(public userHttpService: UserHttpService) { }
 
 
-  searchUser(searchUser4) {
+  searchUsers(searchUser) {
 
-    this.userHttpService.searchUser(searchUser4).then(
+    this.userHttpService.searchUsers(searchUser).then(
       (success) => {
         this.users = this.userHttpService.user;
       },
@@ -30,8 +30,8 @@ export class RepoComponent implements OnInit {
     );
   }
 
-  getRepos(searchUser4) {
-    this.userHttpService.getRepos(searchUser4).then(
+  getRepos(searchUser) {
+    this.userHttpService.getRepos(searchUser).then(
       (success) => {
         this.repos = this.userHttpService.repos;
         console.log(this.repos);
@@ -46,7 +46,7 @@ export class RepoComponent implements OnInit {
 
   ngOnInit() {
 
-    this.searchUser('dejongbrian');
+    this.searchUsers('dejongbrian');
 
     this.getRepos('dejongbrian');
 

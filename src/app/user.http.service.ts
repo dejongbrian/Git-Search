@@ -17,7 +17,7 @@ export class UserHttpService {
     this.user = new User(0, '', '') ;
      }
 
-  searchUser(searchUser: string) {
+  searchUsers(searchUser: string) {
 
     console.log(searchUser);
 
